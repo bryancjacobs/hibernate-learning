@@ -33,8 +33,6 @@ public class JpaMain {
 
         jpa.close();
 
-        FACTORY.close();
-
     }
 
     public Person getById(Integer id) {
@@ -54,6 +52,9 @@ public class JpaMain {
     }
 
     public void close(){
+
         entityManager.close();
+
+        FACTORY.close();
     }
 }
